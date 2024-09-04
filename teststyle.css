@@ -1,0 +1,592 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* background colors */
+
+#header {
+    background-color: #222222; /* Light blue background for the home section */
+}
+
+#about {
+    background-color: #222222; /* Light gray background for the about section */
+}
+
+#skills {
+    background-color: #f5f5f5; /* Light green background for the skills section */
+}
+
+#project {
+    background-color: #f5f5dc; /* Beige background for the projects section */
+}
+
+#contact {
+    background-color: #151413; /* Floral white background for the contact section */
+}
+/* ----------- */
+
+
+body {
+    background:#17181D;
+    color: white;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    /*background-image: url(imgages/bg.png);*/
+    background-size: cover;
+    background-position: right;
+
+}
+#header .header-text h5 {
+    font-family: 'Courier New', Courier, monospace !important;
+    font-weight: 400 !important; 
+    margin-top: 30px !important;
+}
+h4{
+    font-family: 'Courier New', Courier, monospace !important;
+    font-weight: 400 !important; 
+    margin-top: 30px !important;
+    font-size: 18px;
+    
+}
+
+h1 {
+    font-family: 'Canela', serif; /* Apply the Canela font */
+    font-size: 50px;
+  }
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 216px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+
+
+
+
+
+  nav ul li a {
+    color: grey;
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  nav ul li a:hover {
+    color: white; /* Change the color on hover */
+    /* text-decoration: underline; Optional: Add underline on hover */
+  }
+
+/* nav ul li a:hover::after {
+    width: 100%;
+    color: white;
+} */
+
+.header-text {
+    margin-top: 6%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 90px;
+    margin-top: 10px;
+}
+
+.header-text h1 span {
+    color: rgb(227, 143, 215);
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col1 {
+    flex-basis: 35%;
+}
+
+.about-col1 img {
+    width: 100%;
+
+}
+
+.about-col2 {
+
+    flex-basis: 60%;
+
+}
+
+.subtitele {
+    /* margin-top: 10px; */
+    font-size: 60px;
+    font-weight: 600;
+    color: #E09145;
+    margin-bottom: 20px;
+}
+
+
+.tabtittle {
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+
+.tablinks {
+    margin-right: 60px;
+    font-size: 20px;
+    font-weight: 500px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tablinks::after {
+    content: '';
+    width: 0px;
+    height: 3px;
+    background-color: rgb(227, 143, 215);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+
+}
+
+.tablinks.active-link::after {
+    width: 50%;
+}
+
+.tabcontains ul li {
+    list-style: none;
+    margin: 10px 0px;
+
+}
+
+.tabcontains ul li span {
+    color: rgb(189, 132, 180);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.tabcontains {
+    display: none;
+}
+
+.tabcontains.active-tab {
+    display: block;
+}
+
+
+
+.flex-container {
+    display: flex;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+
+/* Style for the first box (flex item) */
+.box1 {
+    flex: 1;
+    /* This makes the box flexible, taking up available space */
+    background:#292C35;
+    /* Horizontal gradient from black to grey */
+    padding: 20px;
+    color: white;
+    /* Baby pink text color */
+    margin-right: 5px;
+    /* Margin to create distance between boxes */
+    border-radius: 10px;
+    /* Add curved border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 40px;
+    /* Add transition effect */
+}
+
+/* Style for the second box (flex item) */
+.box2 {
+    flex: 1;
+    /* This makes the box flexible, taking up available space */
+    background: #292C35;
+    /* Horizontal gradient from black to grey */
+    padding: 20px;
+    color: white;
+    /* Baby pink text color */
+    margin-left: 5px;
+    /* Margin to create distance between boxes */
+    border-radius: 10px;
+    /* Add curved border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Add transition effect */
+    margin-top: 40px;
+}
+
+.flex-container.box1.h2 {
+    align-content: center;
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add hover effect */
+.box1:hover,
+.box2:hover {
+    transform: scale(1.1);
+    /* Increase scale on hover */
+    box-shadow: 0 0 20px white;
+    /* Add box shadow on hover with baby pink color */
+}
+
+/*-------------------services---------------------*/
+#services {
+    padding: 40px 0;
+}
+
+.serviceslist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.boximg {
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* background: black;
+    color: white; */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.boximg:hover {
+    box-shadow: none;
+    /* Remove box shadow on hover */
+}
+
+.boximg img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.boximg:hover img {
+    filter: grayscale(0%);
+    box-shadow: rgb(160, 155, 155);
+    /* Add shadow only to the image on hover */
+}
+
+/* .boximg .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    opacity: 0;
+    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+} */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.boximg:hover .gradient-overlay {
+    opacity: 0.5;
+}
+
+.boximg:hover {
+    transform: scale(1.5);
+    /* Increase scale on hover */
+    box-shadow: 0 0 20px rgb(160, 155, 155);
+}
+
+/*------------------projects---------------*/
+#project {
+    padding: 40px;
+
+}
+
+
+
+.projectlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/*.project {
+    width: 349px;
+    height: 492px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project img {
+    
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}*/
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.10s;
+    transition: transform 0.5s;
+}
+
+/*.layer {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+}*/
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(white, #939361);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    text-align : center;
+    transition: height 0.5s;
+}
+
+
+.layer h3 {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer p {
+    margin: 10px 0 0;
+    color: black;
+    text-align: center;
+}
+.layer img{
+    width: 15px;
+    height: 15px;
+}
+
+/*.layer img{
+    margin-top: 2opx;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    size: 5px;
+}*/
+
+.project:hover img{ 
+    transform: scale(1.1);
+
+}
+
+.project:hover .layer{
+    height: 70%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #000;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.5s;
+    margin-top: 90px;
+    margin-bottom: 20px;
+
+}
+.btn:hover{
+    background: #000;
+    color: white;
+    
+}
+/*---------------------contact------*/
+
+
+
+
+.contactleft {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust this value for equal spacing */
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+  }
+  
+  .contact-item p, .contact-item a {
+    margin: 0;
+  }
+  
+  .contact-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+  }
+
+  
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+
+
+
+  
+
+
+.contactright{
+    flex-basis: 60%;
+}
+
+
+.contactleft i{
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(189, 132, 180);
+    display: inline-block;
+    transition: transform 0.5s;
+
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: white;
+    color: black;
+}
+
+.btn.btn2:hover{
+    display: inline-block;
+    background: black;
+    color: white;
+}
+.contactright form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(63, 63, 63);
+    margin-top: 30px;
+    padding: 15px;
+    color: white;
+    font-size: 18pxs;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 13px 35px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copywrite{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(63, 63, 63);
+    font-weight: 400;
+}
+#msg{
+    color: rgb(19, 80, 19);
+    margin-top: -45px;
+    display: block
+}
+
+
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 40px;
+    }
+    .projectlist {
+        grid-template-columns: 1fr;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+}
