@@ -227,7 +227,24 @@
 
 
 
-
+<!-- <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLdFrvaDKW6Pg8yi3Onw1YEni5ONJtyrY9eQbJN8VjPfZF7i6smJ1TCciM4v74EN95dQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML ="Message has been sent successfully"
+            setTimeout(function() {
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script> -->
 
    
 </body>
