@@ -185,9 +185,11 @@
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="text" name="Email" placeholder=" Your Email" required>
                         <textarea name="Message" placeholder="Your Message" cols="30" rows="10"></textarea>
-                        <button type="submit" class="btn btn2">Hire Me</button>
+                        <button type ="submit" class="btn btn2">Hire Me</button>
 
                      </form>
+
+                
                      <span id="msg">
                         
                      </span>
@@ -198,17 +200,18 @@
         <p>copyrights 2023 | All Rights Reserved by Vaishnavi Kulbhaje.</p>
     </div>
 </div>
+
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwLdFrvaDKW6Pg8yi3Onw1YEni5ONJtyrY9eQbJN8VjPfZF7i6smJ1TCciM4v74EN95dQ/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwqFATiWKnA9cS2StK-Eu8FrjUwntiXQPp9FPAgBSQM0kzjjZbo4rN5BFcVRo-GFLp5XQ/exec'
     const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg");
+    const msg = document.getElementById("msg")
   
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            msg.innerHTML ="Message has been sent successfully"
-            setTimeout(function() {
+            msg.innerHTML="Message sent Successfully"
+            setTimeout(function(){
                 msg.innerHTML = ""
             },5000)
             form.reset()
@@ -216,6 +219,15 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  
+
+
+
+
+
+
+
+
 
    
 </body>
