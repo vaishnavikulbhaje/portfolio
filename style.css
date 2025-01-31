@@ -561,22 +561,25 @@ form input, form textarea{
 form .btn2{
     padding: 13px 35px;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 19px;
     cursor: pointer;
 }
 .copywrite{
     width: 100%;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 27px;
+    margin-top: 77px;
     background-color: rgb(63, 63, 63);
     font-weight: 400;
 }
 #msg{
     color: rgb(19, 80, 19);
-    margin-top: -45px;
+    margin-top: -4px;
+    margin-bottom: 8px;
     display: block
+    
 }
+
 
 
 @media (max-width: 768px) {

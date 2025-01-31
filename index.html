@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="teststyle.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/44fc7c9135.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -138,10 +138,10 @@
             </div>
             
             <div class="project" style ="width: 349px; height: 492px;">
-                <img src="imgages/Screenshot 2023-12-25 220737.png" alt="Online food Website">
+                <img src="imgages/passwordgenerator.png" alt="Password Generator">
                 <div class="layer">
-                    <h3 style="color: black;">Online food Website</h3>
-                    <p style="color: black;">I developed an online food website using HTML and CSS, showcasing my skills in front-end web development.</p>
+                    <h3 style="color: black;">Password Genarator</h3>
+                    <p style="color: black;">Implemented a password generator in React, leveraging useCallback and useEffect for dependency driven updates, optimizing rendering performance. Designed dynamic input controls with range and checkbox inputs to allow adjustable password length and character types, supporting up to 72-character diversity.</p>
                     <!-- <img src="imgages/revert icon.png" style="size: 20px;" alt=""> -->
                 </div>
             </div>
@@ -185,9 +185,11 @@
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="text" name="Email" placeholder=" Your Email" required>
                         <textarea name="Message" placeholder="Your Message" cols="30" rows="10"></textarea>
-                        <button type="submit" class="btn btn2">Hire Me</button>
+                        <button type ="submit" class="btn btn2">Hire Me</button>
 
                      </form>
+
+                
                      <span id="msg">
                         
                      </span>
@@ -198,7 +200,34 @@
         <p>copyrights 2023 | All Rights Reserved by Vaishnavi Kulbhaje.</p>
     </div>
 </div>
+
 <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwqFATiWKnA9cS2StK-Eu8FrjUwntiXQPp9FPAgBSQM0kzjjZbo4rN5BFcVRo-GFLp5XQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  
+
+
+
+
+
+
+
+<!-- <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwLdFrvaDKW6Pg8yi3Onw1YEni5ONJtyrY9eQbJN8VjPfZF7i6smJ1TCciM4v74EN95dQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg");
@@ -215,7 +244,7 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
+  </script> -->
 
    
 </body>
